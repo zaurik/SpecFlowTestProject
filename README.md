@@ -9,3 +9,6 @@
  
  #### Optional 
  - [Git](https://git-scm.com/downloads) or [GitHub Desktop](https://desktop.github.com/)
+
+#### CI/CD Integration
+Please refer [here](https://github.com/zaurik/SpecFlowTestProject/blob/main/CICD%20Integration.md)
