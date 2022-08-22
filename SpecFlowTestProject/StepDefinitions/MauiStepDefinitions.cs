@@ -100,29 +100,11 @@ namespace SpecFlowTestProject.StepDefinitions
                 case "country":
                     CountryCodes countryCode = (CountryCodes)Enum.Parse(typeof(CountryCodes), value.RemoveWhiteSpacesAndPunctuations());  // gets the related enum
                     pricingRequest.CountryCode = countryCode.GetDescription();
-
-                    // TODO - Delete
-                    //if (value == "Australia")
-                    //    pricingRequest.CountryCode = CountryCodes.Australia.GetDescription();
-                    //else if (value == "New Zealand")
-                    //    pricingRequest.CountryCode = CountryCodes.NewZealand.GetDescription();
-                    //else
-                    //    throw new Exception("An invalid country has been specified!");
                     break;
                 case "pick up location":
                     PickUpLocationsNZ puLocation = 
                         (PickUpLocationsNZ)Enum.Parse(typeof(PickUpLocationsNZ), value.RemoveWhiteSpacesAndPunctuations());
                     pricingRequest.CheckoutLocationCode = puLocation.GetDescription();
-
-                    // TODO - Delete
-                    //if (value == "Auckland")
-                    //    pricingRequest.CheckoutLocationCode = PickUpLocationsNZ.Auckand.GetDescription();
-                    //else if (value == "Christchurch")
-                    //    pricingRequest.CheckoutLocationCode = PickUpLocationsNZ.Christchurch.GetDescription();
-                    //else if (value == "Queenstown")
-                    //    pricingRequest.CheckoutLocationCode = PickUpLocationsNZ.Queenstown.GetDescription();
-                    //else
-                    //    throw new Exception("An invalid pick up location has been specified!");
                     break;
                 case "pick up date":
                     string[] puDateValues = value.Trim().Split('/');
@@ -136,16 +118,6 @@ namespace SpecFlowTestProject.StepDefinitions
                     PickUpLocationsNZ doLocation = 
                         (PickUpLocationsNZ)Enum.Parse(typeof(PickUpLocationsNZ), value.RemoveWhiteSpacesAndPunctuations());
                     pricingRequest.CheckinLocationCode = doLocation.GetDescription();
-
-                    // TODO - Delete
-                    //if (value == "Auckland")
-                    //    pricingRequest.CheckinLocationCode = PickUpLocationsNZ.Auckand.GetDescription();
-                    //else if (value == "Christchurch")
-                    //    pricingRequest.CheckinLocationCode = PickUpLocationsNZ.Christchurch.GetDescription();
-                    //else if (value == "Queenstown")
-                    //    pricingRequest.CheckinLocationCode = PickUpLocationsNZ.Queenstown.GetDescription();
-                    //else
-                    //    throw new Exception("An invalid pick up location has been specified!");
                     break;
                 case "driver's license":
                     string dlCountry = string.Concat(value.Where(c => !char.IsWhiteSpace(c)));  // removes all whitespaces
